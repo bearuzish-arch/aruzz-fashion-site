@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aruzz Fashion — Modern Handcrafted Essentials</title>
+    <meta name="description" content="Aruzz Fashion — handcrafted accessories with modern design. Shop bracelets, bangles, scarves and more with fast delivery in Bangladesh." />
+    <!-- Tailwind CSS CDN (no extra CSS files used) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#f5f7ff',
+                100: '#ebefff',
+                200: '#d6dcff',
+                300: '#b3bdff',
+                400: '#8693ff',
+                500: '#5a67ff',
+                600: '#454ae6',
+                700: '#383ac0',
+                800: '#2f329a',
+                900: '#292b7d'
+              }
+            },
+            boxShadow: {
+              glow: '0 10px 25px -5px rgba(90,103,255,0.35), 0 8px 10px -6px rgba(90,103,255,0.25)'
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="antialiased text-slate-800 bg-white selection:bg-brand-200 selection:text-brand-900">
+    <!-- ===== Header / Navbar ===== -->
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <!-- Brand -->
+          <a href="#home" class="inline-flex items-center gap-2">
+            <!-- Logo (Heroicon sparkles) -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 text-brand-600">
+              <path d="M5 3a1 1 0 011 1v2h2a1 1 0 110 2H6v2a1 1 0 11-2 0V8H2a1 1 0 110-2h2V4a1 1 0 011-1zm11-1a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0V8h-3a1 1 0 110-2h3V3a1 1 0 011-1zM7 17a1 1 0 011 1v1h1a1 1 0 110 2H8v1a1 1 0 11-2 0v-1H5a1 1 0 110-2h1v-1a1 1 0 011-1z"/>
+            </svg>
+            <span class="text-lg sm:text-xl font-extrabold tracking-tight"><span class="text-brand-700">Aruzz</span> <span class="text-slate-900">Fashion</span></span>
+          </a>
+
+          <!-- Mobile toggle -->
+          <input id="menu-toggle" type="checkbox" class="peer hidden" aria-label="Toggle navigation" />
+          <label for="menu-toggle" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg hover:bg-slate-100" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+            </svg>
+          </label>
+
+          <!-- Links -->
+          <div class="hidden md:flex items-center gap-6">
+            <a href="#home" class="font-medium hover:text-brand-600 transition">Home</a>
+            <a href="#products" class="font-medium hover:text-brand-600 transition">Products</a>
+            <a href="#reviews" class="font-medium hover:text-brand-600 transition">Reviews</a>
+            <a href="#contact" class="font-medium hover:text-brand-600 transition">Contact</a>
+            <a href="#cta" class="inline-flex items-center rounded-xl bg-brand-600 px-4 py-2 text-white font-semibold shadow-glow hover:shadow-lg hover:bg-brand-700 active:translate-y-[1px] transition">Shop Now</a>
+          </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="peer-checked:block hidden md:hidden pb-4" id="mobile-menu">
+          <div class="flex flex-col gap-2 pt-2">
+            <a onclick="document.getElementById('menu-toggle').checked=false" href="#home" class="rounded-lg px-3 py-2 hover:bg-slate-100">Home</a>
+            <a onclick="document.getElementById('menu-toggle').checked=false" href="#products" class="rounded-lg px-3 py-2 hover:bg-slate-100">Products</a>
+            <a onclick="document.getElementById('menu-toggle').checked=false" href="#reviews" class="rounded-lg px-3 py-2 hover:bg-slate-100">Reviews</a>
+            <a onclick="document.getElementById('menu-toggle').checked=false" href="#contact" class="rounded-lg px-3 py-2 hover:bg-slate-100">Contact</a>
+            <a onclick="document.getElementById('menu-toggle').checked=false" href="#cta" class="rounded-lg px-3 py-2 bg-brand-50 text-brand-700 border border-brand-200">Shop Now</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="home">
+      <!-- ===== Hero / Banner (static, responsive) ===== -->
+      <section class="relative overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2000&auto=format&fit=crop" alt="Handcrafted accessories on a styled table" class="absolute inset-0 h-full w-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-slate-900/60 to-brand-900/60"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-28 lg:py-36">
+          <div class="max-w-2xl text-white">
+            <h1 class="text-3xl sm:text-5xl font-black leading-tight tracking-tight">Handcrafted. Ethical. Effortlessly <span class="text-brand-300">You</span>.</h1>
+            <p class="mt-4 sm:mt-6 text-base sm:text-lg text-slate-100/90">Discover bangles, bracelets, scarves, and minimal jewelry made with care in Bangladesh. Free exchanges within 7 days. Nationwide cash‑on‑delivery.</p>
+            <div class="mt-8 flex flex-wrap items-center gap-3">
+              <a href="#products" class="inline-flex items-center rounded-2xl bg-white text-slate-900 px-6 py-3 font-semibold shadow-lg hover:shadow-xl active:translate-y-[1px] transition">
+                Browse Products
+              </a>
+              <a href="#about" class="inline-flex items-center rounded-2xl bg-transparent ring-1 ring-white/60 text-white px-6 py-3 font-semibold hover:bg-white/10 transition">
+                About Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Products (3×3 grid) ===== -->
+      <section id="products" class="py-16 sm:py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex items-end justify-between flex-wrap gap-4">
+            <div>
+              <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900">Our Bestsellers</h2>
+              <p class="mt-1 text-slate-600">Thoughtfully crafted pieces that elevate your everyday style.</p>
+            </div>
+            <a href="#cta" class="inline-flex items-center rounded-xl bg-brand-600 px-4 py-2 text-white font-semibold shadow hover:bg-brand-700">Get 10% Off</a>
+          </div>
+
+          <!-- Grid -->
+          <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Product Card Template -->
+            <!-- 1 -->
+            <article class="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition overflow-hidden border border-slate-100">
+  <div class="overflow-hidden">
+    <img
+      class="h-56 w-full object-cover group-hover:scale-105 transition"
+      src="https://www.tbsnews.net/sites/default/files/styles/infograph/public/images/2025/04/11/web.whatsapp_17.png"
+      alt="Noor Bangle Set — gold-tone bangles"
+      loading="lazy"
+      width="1600"
+      height="900"
+    />
+  </div>
+  <div class="p-5">
+    <h3 class="font-semibold text-lg">Noor Bangle Set</h3>
+    <p class="mt-1 text-slate-600">Hand-polished bangles with warm gold finish — light, elegant, everyday.</p>
+    <div class="mt-4 flex items-center justify-between">
+      <span class="text-brand-700 font-bold">৳350</span>
+      <button class="rounded-xl bg-brand-600 px-4 py-2 text-white font-medium hover:bg-brand-700 active:translate-y-[1px]">Buy Now</button>
+    </div>
+  </div>
+</article>
+
+            <!-- 2 -->
+            <article class="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition overflow-hidden border border-slate-100">
+  <div class="overflow-hidden">
+    <img
+      class="h-56 w-full object-cover group-hover:scale-105 transition"
+      src="https://taashacrafts.com/wp-content/uploads/2024/04/product-022.jpg"
+      alt="Luna Minimal Bracelet — elegant stainless steel design"
+      loading="lazy"
+      width="1600"
+      height="900"
+    />
+  </div>
+  <div class="p-5">
+    <h3 class="font-semibold text-lg">Luna Minimal Bracelet</h3>
+    <p class="mt-1 text-slate-600">Stainless steel, tarnish-resistant, gentle on skin. Pairs with any outfit.</p>
+    <div class="mt-4 flex items-center justify-between">
+      <span class="text-brand-700 font-bold">৳520</span>
+      <button class="rounded-xl bg-brand-600 px-4 py-2 text-white font-medium hover:bg-brand-700">Buy Now</button>
+    </div>
+  </div>
+</article>
+
+            <!-- 3 -->
+            <article class="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition overflow-hidden border border-slate-100">
+  <div class="overflow-hidden">
+    <img
+      class="h-56 w-full object-cover group-hover:scale-105 transition"
+      src="https://cdn.vibecity.in/providers/6227acc0da272700119ed174/il794xN.37805215004scv_80e1403a-f5e8-41b8-a272-02a4548e0a20.jpg"
+      alt="Ayna Handwoven Scarf — soft cotton weave"
+      loading="lazy"
+      width="1600"
+      height="900"
+    />
+  </div>
+  <div class="p-5">
+    <h3 class="font-semibold text-lg">Ayna Handwoven Scarf</h3>
+    <p class="mt-1 text-slate-600">Soft cotton weave from local artisans — cozy, breathable, beautiful.</p>
+    <div class="mt-4 flex items-center justify-between">
+      <span class="text-brand-700 font-bold">৳690</span>
+      <button class="rounded-xl bg-brand-600 px-4 py-2 text-white font-medium hover:bg-brand-700">Buy Now</button>
+    </div>
+  </div>
+</article>
+            <!-- 4 -->
+            <article class="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition overflow-hidden border border-slate-100">
+  <div class="overflow-hidden">
+    <img
+      class="h-56 w-full object-cover group-hover:scale-105 transition"
+      src="https://saubhagyavati.in/cdn/shop/files/Ethnic_Latest_Silk_Thread_Handmade_Bangles_Set_for_Girls_and_Women_s_-_Saubhagyavati.in-4389721.jpg?v=1728372299"
+      alt="Pearl Drop Earrings — silk thread handmade bangles style"
+      loading="lazy"
+      width="1600"
+      height="900"
+    />
+  </div>
+  <div class="p-5">
+    <h3 class="font-semibold text-lg">Pearl Drop Earrings</h3>
+    <p class="mt-1 text-slate-600">Classic freshwater pearls with a modern silhouette. Light and secure.</p>
+    <div class="mt-4 flex items-center justify-between">
+      <span class="text-brand-700 font-bold">৳780</span>
+      <button class="rounded-xl bg-brand-600 px-4 py-2 text-white font-medium hover:bg-brand-700">Buy Now</button>
+    </div>
+  </div>
+</article>
+
+            <!-- 5 -->
+            <article class="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition overflow-hidden border border-slate-100">
+  <div class="overflow-hidden">
+    <img
+      class="h-56 w-full object-cover group-hover:scale-105 transition"
+      src="https://www.zwende.com/cdn/shop/files/Taasha-craft_Sindhu_pdp_1.jpg?v=1707989228&width=1080"
+      alt="Nexa Card Holder — handcrafted leather design"
+      loading="lazy"
+      width="1600"
+      height="900"
+    />
+  </div>
+  <div class="p-5">
+    <h3 class="font-semibold text-lg">Nexa Card Holder</h3>
+    <p class="mt-1 text-slate-600">Slim leather wallet with two slots and a center pocket. Pocket-friendly.</p>
+    <div class="mt-4 flex items-center justify-between">
+      <span class="text-brand-700 font-bold">৳950</span>
+      <button class="rounded-xl bg-brand-600 px-4 py-2 text-white font-medium hover:bg-brand-700">Buy Now</button>
+    </div>
+  </div>
+</article>
+            <!-- 6 -->
+            <article class="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition overflow-hidden border border-slate-100">
+  <div class="overflow-hidden">
+    <img
+      class="h-56 w-full object-cover group-hover:scale-105 transition"
+      src="https://i.pinimg.com/736x/53/55/a7/5355a78cedaa15b9ed04981593e9aa8a.jpg"
+      alt="Sabiha Bead Bracelet — matte stone beads with elastic fit"
+      loading="lazy"
+      width="1200"
+      height="900"
+    />
+  </div>
+  <div class="p-5">
+    <h3 class="font-semibold text-lg">Sabiha Bead Bracelet</h3>
+    <p class="mt-1 text-slate-600">Matte stone beads with elastic fit. Calm tones inspired by nature.</p>
+    <div class="mt-4 flex items-center justify-between">
+      <span class="text-brand-700 font-bold">৳420</span>
+      <button class="rounded-xl bg-brand-600 px-4 py-2 text-white font-medium hover:bg-brand-700">Buy Now</button>
+    </div>
+  </div>
+</article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Reviews ===== -->
+      <section id="reviews" class="py-16 sm:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900">What Our Customers Say</h2>
+          <p class="mt-1 text-slate-600">Real stories from Bangladesh shoppers.</p>
+
+          <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Review 1 -->
+            <figure class="rounded-2xl border border-slate-200 p-6 bg-white shadow-sm hover:shadow-md transition">
+              <div class="flex items-center gap-4">
+                <img class="h-12 w-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=200&auto=format&fit=crop" alt="Photo of customer Aisha" />
+                <figcaption>
+                  <p class="font-semibold">Aisha Rahman</p>
+                  <div class="flex" aria-label="5 star rating">
+                    <!-- 5 stars -->
+                    <svg class="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.803 2.036a1 1 0 00-.364 1.118l1.07 3.292c.3.922-.755 1.688-1.54 1.118l-2.803-2.036a1 1 0 00-1.175 0l-2.803 2.036c-.784.57-1.838-.196-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81H7.03a1 1 0 00.95-.69l1.07-3.292z"/></svg>
+                    <svg class="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.803 2.036a1 1 0 00-.364 1.118l1.07 3.292c.3.922-.755 1.688-1.54 1.118l-2.803-2.036a1 1 0 00-1.175 0l-2.803 2.036c-.784.57-1.838-.196-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81H7.03a1 1 0 00.95-.69l1.07-3.292z"/></svg>
+                    <svg class="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.803 2.036a1 1 0 00-.364 1.118l1.07 3.292c.3.922-.755 1.688-1.54 1.118l-2.803-2.036a1 1 0 00-1.175 0l-2.803 2.036c-.784.57-1.838-.196-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81H7.03a1 1 0 00.95-.69l1.07-3.292z"/></svg>
+                    <svg class="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.803 2.036a1 1 0 00-.364 1.118l1.07 3.292c.3.922-.755 1.688-1.54 1.118l-2.803-2.036a1 1 0 00-1.175 0l-2.803 2.036c-.784.57-1.838-.196-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81H7.03a1 1 0 00.95-.69l1.07-3.292z"/></svg>
+                    <svg class="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.803 2.036a1 1 0 00-.364 1.118l1.07 3.292c.3.922-.755 1.688-1.54 1.118l-2.803-2.036a1 1 0 00-1.175 0l-2.803 2.036c-.784.57-1.838-.196-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81H7.03a1 1 0 00.95-.69l1.07-3.292z"/></svg>
+                  </div>
+                </figcaption>
+              </div>
+              <p class="mt-4 text-slate-700">“The Noor bangles are gorgeous! Delivery to Dhaka was quick and the packaging felt premium.”</p>
+            </figure>
+            <!-- Review 2 -->
+            <figure class="rounded-2xl border border-slate-200 p-6 bg-white shadow-sm hover:shadow-md transition">
+              <div class="flex items-center gap-4">
+                <img class="h-12 w-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop" alt="Photo of customer Farhan" />
+                <figcaption>
+                  <p class="font-semibold">Farhan Ahmed</p>
+                  <div class="flex" aria-label="4 star rating">
+                    <svg class="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.803 2.036a1 1 0 00-.364 1.118l1.07 3.292c.3.922-.755 1.688-1.54 1.118l-2.803-2.036a1 1 0 00-1.175 0l-2.803 2.036c-.784.57-1.838-.196-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81H7.03a1 1 0 00.95-.69l1.07-3.292z"/></svg>
+                    <svg class="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.803 2.036a1 1 0 00-.364 1.118l1.07 3.292c.3.922-.755 1.688-1.54 1.118l-2.803-2.036a1 1 0 00-1.175 0l-2.803 2.036c-.784.57-1.838-.196-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81H7.03a1 1 0 00.95-.69l1.07-3.292z"/></svg>
+                    <svg class="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.803 2.036a1 1 0 00-.364 1.118l1.07 3.292c.3.922-.755 1.688-1.54 1.118l-2.803-2.036a1 1 0 00-1.175 0l-2.803 2.036c-.784.57-1.838-.196-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81H7.03a1 1 0 00.95-.69l1.07-3.292z"/></svg>
+                    <svg class="h-5 w-5 text-slate-300" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.803 2.036a1 1 0 00-.364 1.118l1.07 3.292c.3.922-.755 1.688-1.54 1.118l-2.803-2.036a1 1 0 00-1.175 0l-2.803 2.036c-.784.57-1.838-.196-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81H7.03a1 1 0 00.95-.69l1.07-3.292z"/></svg>
+                  </div>
+                </figcaption>
+              </div>
+              <p class="mt-4 text-slate-700">“Great quality bracelet. I wore it to office and it feels premium. Will buy again.”</p>
+            </figure>
+            <!-- Review 3 -->
+            <figure class="rounded-2xl border border-slate-200 p-6 bg-white shadow-sm hover:shadow-md transition">
+              <div class="flex items-center gap-4">
+                <img class="h-12 w-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=200&auto=format&fit=crop" alt="Photo of customer Tania" />
+                <figcaption>
+                  <p class="font-semibold">Tania Akter</p>
+                  <div class="flex" aria-label="5 star rating">
+                    <svg class="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.803 2.036a1 1 0 00-.364 1.118l1.07 3.292c.3.922-.755 1.688-1.54 1.118l-2.803-2.036a1 1 0 00-1.175 0l-2.803 2.036c-.784.57-1.838-.196-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81H7.03a1 1 0 00.95-.69l1.07-3.292z"/></svg>
+                    <svg class="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.803 2.036a1 1 0 00-.364 1.118l1.07 3.292c.3.922-.755 1.688-1.54 1.118l-2.803-2.036a1 1 0 00-1.175 0l-2.803 2.036c-.784.57-1.838-.196-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81H7.03a1 1 0 00.95-.69l1.07-3.292z"/></svg>
+                    <svg class="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.803 2.036a1 1 0 00-.364 1.118l1.07 3.292c.3.922-.755 1.688-1.54 1.118l-2.803-2.036a1 1 0 00-1.175 0l-2.803 2.036c-.784.57-1.838-.196-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81H7.03a1 1 0 00.95-.69l1.07-3.292z"/></svg>
+                    <svg class="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.803 2.036a1 1 0 00-.364 1.118l1.07 3.292c.3.922-.755 1.688-1.54 1.118l-2.803-2.036a1 1 0 00-1.175 0l-2.803 2.036c-.784.57-1.838-.196-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81H7.03a1 1 0 00.95-.69l1.07-3.292z"/></svg>
+                  </div>
+                </figcaption>
+              </div>
+              <p class="mt-4 text-slate-700">“Loved the scarf! Soft and breathable — perfect for Chittagong evenings.”</p>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CTA (Additional Section) ===== -->
+<section id="cta" class="relative py-16 sm:py-20">
+  <div class="absolute inset-0 -z-10 bg-gradient-to-br from-brand-50 via-white to-brand-100"></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="overflow-hidden rounded-3xl border border-brand-200 bg-white shadow-glow">
+      <div class="grid md:grid-cols-2">
+        <div class="p-8 sm:p-12">
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Join the Aruzz Club — get 10% off your first order</h3>
+          <p class="mt-3 text-slate-600">Early access to drops, care tips from artisans, and special members-only offers. Unsubscribe anytime.</p>
+          <form class="mt-6 flex flex-col sm:flex-row gap-3" onsubmit="event.preventDefault()">
+            <label class="sr-only" for="email">Email</label>
+            <input id="email" type="email" required placeholder="Enter your email" class="w-full rounded-xl border-slate-300 focus:border-brand-500 focus:ring-brand-500" />
+            <button class="inline-flex items-center justify-center rounded-xl bg-brand-600 px-5 py-3 text-white font-semibold hover:bg-brand-700 active:translate-y-[1px]">Subscribe</button>
+          </form>
+          <p class="mt-2 text-xs text-slate-500">We respect your privacy. No spam — just good news.</p>
+        </div>
+
+        <!-- Image + caption -->
+        <div class="relative min-h-[260px]">
+          <img
+            class="absolute inset-0 h-full w-full object-cover"
+            src="https://m.media-amazon.com/images/I/71+uN5fwSRL._UY1100_.jpg"
+            alt="Artisan hand-threading colorful silk bangles on a workbench — a glimpse of the craftsmanship behind Aruzz Fashion."
+            loading="lazy"
+          />
+          <!-- Caption overlay (description related to the picture) -->
+          <p class="absolute bottom-3 left-3 right-3 md:right-auto md:max-w-sm rounded-lg bg-black/50 px-3 py-2 text-xs sm:text-sm text-white">
+            Behind every piece is a human touch — artisans carefully wrap and thread vibrant silk bangles, bringing color and culture to your everyday style.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <!-- ===== About (short, optional anchor target) ===== -->
+      <section id="about" class="py-16 sm:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900">About Aruzz Fashion</h2>
+            <p class="mt-4 text-slate-700">We collaborate with small artisan groups across Bangladesh to create timeless, durable pieces. Every purchase supports ethical wages, sustainable materials, and local craftsmanship.</p>
+            <ul class="mt-5 space-y-2 text-slate-700">
+              <li class="flex items-start gap-2"><svg class="mt-1 h-5 w-5 text-brand-600" viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4 2 2-6 6-4-4 2-2z"/></svg> Ethical sourcing & fair pay</li>
+              <li class="flex items-start gap-2"><svg class="mt-1 h-5 w-5 text-brand-600" viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4 2 2-6 6-4-4 2-2z"/></svg> Skin‑safe, nickel‑free metals</li>
+              <li class="flex items-start gap-2"><svg class="mt-1 h-5 w-5 text-brand-600" viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4 2 2-6 6-4-4 2-2z"/></svg> 7‑day free exchange in BD</li>
+            </ul>
+          </div>
+          <div class="relative">
+            <img class="rounded-3xl shadow-xl w-full object-cover" src="https://images.unsplash.com/photo-1520975562484-5321cb87c1c5?q=80&w=1600&auto=format&fit=crop" alt="Lifestyle photo of accessories" />
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Contact ===== -->
+      <section id="contact" class="py-16 sm:py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid lg:grid-cols-2 gap-10">
+            <div>
+              <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900">Contact Us</h2>
+              <p class="mt-2 text-slate-600">We’re here to help — sizing, orders, or custom requests.</p>
+              <div class="mt-6 space-y-3 text-slate-700">
+                <p class="flex items-start gap-3"><svg class="mt-0.5 h-6 w-6 text-brand-600" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg> House 22, Road 10, Block C, Chittagong 4212, Bangladesh</p>
+                <p class="flex items-start gap-3"><svg class="mt-0.5 h-6 w-6 text-brand-600" viewBox="0 0 24 24" fill="currentColor"><path d="M2 8a2 2 0 012-2h16a2 2 0 012 2v.4l-10 5-10-5V8zm0 3.2l9.6 4.8a2 2 0 001.8 0L23 11.2V16a2 2 0 01-2 2H5a3 3 0 01-3-3v-3.8z"/></svg> hello@aruzzfashion.com</p>
+                <p class="flex items-start gap-3"><svg class="mt-0.5 h-6 w-6 text-brand-600" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.36 11.36 0 003.56.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h2.5a1 1 0 011 1 11.36 11.36 0 00.57 3.56 1 1 0 01-.24 1.02l-1.21 1.21z"/></svg> +880 1777‑123456</p>
+              </div>
+            </div>
+
+            <form class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm" onsubmit="event.preventDefault()">
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="name" class="block text-sm font-medium text-slate-700">Name</label>
+                  <input id="name" type="text" required class="mt-1 w-full rounded-xl border-slate-300 focus:border-brand-500 focus:ring-brand-500" placeholder="Your full name" />
+                </div>
+                <div>
+                  <label for="email2" class="block text-sm font-medium text-slate-700">Email</label>
+                  <input id="email2" type="email" required class="mt-1 w-full rounded-xl border-slate-300 focus:border-brand-500 focus:ring-brand-500" placeholder="you@example.com" />
+                </div>
+                <div class="sm:col-span-2">
+                  <label for="message" class="block text-sm font-medium text-slate-700">Message</label>
+                  <textarea id="message" rows="5" required class="mt-1 w-full rounded-2xl border-slate-300 focus:border-brand-500 focus:ring-brand-500" placeholder="Tell us how we can help"></textarea>
+                </div>
+              </div>
+              <div class="mt-6 flex items-center justify-between">
+                <p class="text-xs text-slate-500">By submitting, you agree to our friendly privacy policy.</p>
+                <button class="inline-flex items-center justify-center rounded-xl bg-brand-600 px-5 py-3 text-white font-semibold hover:bg-brand-700 active:translate-y-[1px]">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="border-t border-slate-200 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div class="grid md:grid-cols-3 gap-8 items-start">
+          <div>
+            <a href="#home" class="inline-flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-brand-600"><path d="M5 3a1 1 0 011 1v2h2a1 1 0 110 2H6v2a1 1 0 11-2 0V8H2a1 1 0 110-2h2V4a1 1 0 011-1z"/></svg>
+              <span class="text-lg font-extrabold"><span class="text-brand-700">Aruzz</span> <span class="text-slate-900">Fashion</span></span>
+            </a>
+            <p class="mt-3 text-sm text-slate-600 max-w-sm">Handcrafted accessories made with love in Bangladesh. We believe in ethical production and timeless design.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-slate-900">Quick Links</h4>
+            <ul class="mt-3 space-y-2 text-slate-700">
+              <li><a class="hover:text-brand-600" href="#home">Home</a></li>
+              <li><a class="hover:text-brand-600" href="#about">About</a></li>
+              <li><a class="hover:text-brand-600" href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-slate-900">Follow Us</h4>
+            <div class="mt-3 flex items-center gap-3">
+              <a aria-label="Facebook" href="#" class="p-2 rounded-full border border-slate-200 hover:border-brand-400 hover:text-brand-600 transition">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 10-11.5 9.87v-6.99H7.9V12h2.6V9.8c0-2.57 1.53-3.99 3.87-3.99 1.12 0 2.29.2 2.29.2v2.52h-1.29c-1.27 0-1.66.79-1.66 1.6V12h2.83l-.45 2.88h-2.38v6.99A10 10 0 0022 12z"/></svg>
+              </a>
+              <a aria-label="X" href="#" class="p-2 rounded-full border border-slate-200 hover:border-brand-400 hover:text-brand-600 transition">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2H21l-6.5 7.43L22 22h-6.59l-4.31-5.59L5.9 22H3.15l7.01-8L2 2h6.7l3.87 5.17L18.24 2zm-2.31 18h1.27L8.12 4H6.78l9.154 16z"/></svg>
+              </a>
+              <a aria-label="Instagram" href="#" class="p-2 rounded-full border border-slate-200 hover:border-brand-400 hover:text-brand-600 transition">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2a3 3 0 013 3v10a3 3 0 01-3 3H7a3 3 0 01-3-3V7a3 3 0 013-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2.2A2.8 2.8 0 1112 15a2.8 2.8 0 010-5.6zM18 6.5a1 1 0 100 2 1 1 0 000-2z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="pt-6 border-t border-slate-200 text-sm text-slate-500 text-center">© <span id="y"></span> Aruzz Fashion. All rights reserved.</div>
+      </div>
+    </footer>
+
+    <script>
+      // update footer year
+      document.getElementById('y').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
